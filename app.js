@@ -1,5 +1,5 @@
 var express = require('express');
-var config = require('./config/config');
+var config = require('./config');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -11,14 +11,8 @@ var users = require('./app/routes/users');
 
 var app = express();
 // view engine setup
-app.set('views', path.join(__dirname, 'app/views'));
-app.engine('html', require('hogan-express'));
-app.set('view engine', 'html');
-app.set('layout', 'layouts/default/index');
-app.set('partials', {header: 'layouts/default/header',
-		     left_sidebar: 'layouts/default/left_sidebar',
-		     breadcrumb: 'layouts/default/breadcrumb',
-		     footer: 'layouts/default/footer'});
+app.set('views', path.join(__dirname, 'app/themes/default'));
+app.set('view engine', 'jade');
 app.enable ('view cache');
 
 // uncomment after placing your favicon in /public

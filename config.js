@@ -1,9 +1,10 @@
 var config = function (req, res, next) {
    res.locals = {
-       institute: 'Crescent Model School and College',
-       copyright: 'Precursor Technology'
-       
+       'institute' : 'UdoyJS',
+       'copyright' : 'udoyjs',
+       'theme' : 'default'
    };
     next();
 };
+
 module.exports = config;
