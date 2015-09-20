@@ -1,0 +1,135 @@
+{{> header}}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10">
+
+      <p class="header">Login</p>
+ 
+     {{#if message.login}}
+        <div class="alert alert-danger">{{message.login}}</div>
+      {{/if}}
+
+      <div class="row">
+	<div class="col-lg-12">
+	  <form class="form-horizontal" data-toggle="validator" role="form" action="/login_registration" method="post">
+
+	    <div class="form-group">
+	      <p for="inputEmail3" class="col-sm-4 control-label">IF You Are Bangladesh Directory Page. You Are In The Biggest Business PlatForm Of Bangladesh</p>
+	      <div class="col-sm-8">
+		<label for="inputEmail" class="control-label">Email</label>
+		<input type="email" class="form-control" name="l_email" id="inputEmail" placeholder="Email" data-error="That email address is invalid" required>
+		<div class="help-block with-errors"></div>
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <label for="inputPassword3" class="col-sm-4 control-label">To Be Here You Just Need To Type Few Words!</label>
+	      <div class="col-sm-8">
+		<label for="inputPassword3" class="control-label">Password</label>
+		<input type="password" name="l_password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+		<span class="help-block">Minimum of 6 characters</span>
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <div class="col-sm-offset-4 col-sm-8">
+		<div class="checkbox">
+		  <label class="Vertical-separator">
+		    <input type="checkbox" name="remember" value="remember-me"> Remember me
+		  </label>
+		  <label>
+		    <a href="reset.html">Forgot password?</a>
+		  </label>
+		</div>
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <div class="col-sm-offset-4 col-sm-8">
+		<button type="submit" class="btn btn-large search-bar-button" type="button">LOGIN</button>
+	      </div>
+	    </div>
+
+
+	  </form>
+	</div>	<!-- /.col-lg-12 -->
+      </div><!-- /.row -->
+
+      <div class="register">
+	<p>Don't Have Account Yet?</p>
+        <h1>Register Now!</h1>
+        <p class=""> It's Free</p>
+      </div>
+
+
+      <p class="header">Register For An Account</p>
+      {{#if message.signup}}
+        <div class="alert alert-danger">{{message.signup}}</div>
+      {{/if}}
+      <div class="row">
+	<form class="form-horizontal" data-toggle="validator" role="form" action="/login_registration" method="post">
+	  <div class="form-group">
+	    <label for="inputName" class="col-sm-3 control-label">*First Name</label>
+	    <div class="col-sm-9">
+	      <input type="text" name="r_first_name" class="form-control" id="inputName" placeholder="First Name" required>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="formGroupInput" class="col-sm-3 control-label">*Surname</label>
+	    <div class="col-sm-9">
+	      <input type="text" name="r_surname" class="form-control" id="formGroupInput" placeholder="Surname">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="formGroupInput" class="col-sm-3 control-label">Mobile Number</label>
+	    <div class="col-sm-9">
+	      <input type="text" name="r_mobile" class="form-control" id="formGroupInput" placeholder="If you have">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-3 control-label">*Email</label>
+	    <div class="col-sm-9">
+	      <input type="email" name="r_email" class="form-control" id="inputEmail3" placeholder="Email">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <p class="col-sm-offset-3 col-sm-9">You will need this to login to your account</p>
+	    <label for="inputPassword3" class="col-sm-3 control-label">*Password</label>
+	    <div class="col-sm-9">
+	      <input type="password" name="r_password1" class="form-control" id="inputPassword3" placeholder="Password">
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label for="inputPassword3" class="col-sm-3 control-label">*Confirm Password</label>
+	    <div class="col-sm-9">
+	      <input type="password" name="r_password2" class="form-control" id="inputPassword3" placeholder="Password">
+	    </div>
+	  </div>
+          <div class="form-group">
+	    <div class="col-sm-offset-3 col-sm-9">
+	      <div class="checkbox">
+		<label>
+		  <input type="checkbox" name="agree" value="remember-me"> I agree to the <a href="#">privacy policy</a> and <a href="#">Conditions to Use</a>
+		</label>
+	      </div>
+	    </div>
+          </div>
+          <div class="form-group">
+	    <div class="col-sm-offset-3 col-sm-9">
+	      <button Type="submit" class="btn btn-large search-bar-button">Registration</button>
+	    </div>
+	  </div>
+	</form>
+
+
+
+      </div><!-- /.row -->
+
+    </div>
+    <!-- col-lg 2 start -->
+    <div class="col-lg-2">
+      {{> right_sidebar}}
+    </div><!-- /col-lg-2 end -->
+
+  </div><!-- /.row -->
+</div><!-- /.container -->
+{{> footer}}
