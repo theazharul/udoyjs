@@ -1,6 +1,4 @@
-module.exports = function(app){
-    
-    app.use('/', require('./home'));
-    app.use('/users', require('./users'));
-
-}    
+module.exports = function(app, config){
+    require('./home')(app);
+    require('./users')(app);  
+};
